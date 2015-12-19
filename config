@@ -1,0 +1,3 @@
+[ssh]
+keyword = Failed password
+file = /var/log/auth.log
