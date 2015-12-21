@@ -93,7 +93,6 @@ class Connections:
 		self.prev_attempt = time.time()
 		if previous_attempt_elapse >= SLOW_SCAN_TIME and previous_attempt_elapse < 7200:
 			self.odd_attempts += 1
-			print "Подозрительное действие"
 			if self.odd_attempts >= 3:
 				ban_ip(self.ip, service, 1) # бан навсегда
 				print "Бан %s в %s по подозрению в медленном брутфорсе" % (self.ip, service)
